@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<style>
+@font-face{font-family:lpmq;src:local('LPMQ'),url(fonts/LPMQ.woff2) 
+format('woff2'),url(fonts/LPMQ.woff) format('woff'),url(fonts/LPMQ.ttf) 
+format('truetype'),url(fonts/LPMQ.eot) format('embedded-opentype');font-weight:400;font-style:normal;font-display:swap}/*!normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css*/html{line-height:1.15;-webkit-text-size-adjust:100%}
+body{margin:0; padding:5%;}main{display:block}
+h1{font-size:2em;margin:.67em 0}
+hr{box-sizing:content-box;height:0;overflow:visible}
+pre{font-family:monospace,monospace;font-size:1em}
+a{background-color:transparent}
+abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}.cf:after,.full:after,.row:after,.ui-helper-clearfix:after,.wrap:after{clear:both}html{background:#fff;scroll-behavior:smooth}body{font-size:16px;font-weight:400;line-height:1.5;color:#212121}ol,ul{margin:0;padding:0}a{color:#212121;text-decoration:none;-webkit-transition:all .1s 0s ease-in;-moz-transition:all .1s 0s ease-in;-o-transition:all .1s 0s ease-in;transition:all .1s 0s ease-in}a:hover{color:#af862f;-webkit-transition:all .05s 0s ease-out;-moz-transition:all .05s 0s ease-out;-o-transition:all .05s 0s ease-out;transition:all .05s 0s ease-out}.main{margin-top:96px}.wrap{max-width:1000px;width:90%;margin-left:auto;margin-right:auto}.rel{position:relative}.header-nav{width:100%;max-width:1024px;margin:0 auto;border-top:6px solid #000a12;background:#f5f5f5;top:0;position:fixed;height:48px;left:0;right:0;z-index:2}.logo{margin:0}.logo a{font:700 12px/48px sans-serif;float:left;padding:0 12px;text-decoration:none}#search{display:none;border:none;margin:0;padding:0;width:100%;top:0;right:0;text-indent:12px;font:400 14px/24px Arial,sans-serif;padding:12px 0}#search-box{box-sizing:border-box;position:absolute;top:6px;right:0;width:100%;display:block;border:none;outline:none;z-index:100;line-height:24px;padding:6px 12px 11px;border-bottom:1px solid #e6e7e7}#search:focus{outline:0;color:#eaeaea}label[for=nav-trigger]{position:absolute;top:0;right:0;z-index:120;width:48px;height:48px;cursor:pointer;background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyNCcgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0Jz48cGF0aCBzdHlsZT0nZmlsbDojMjEyMTIxJyBkPSdNMTUuNSAxNGgtLjc5bC0uMjgtLjI3QzE1LjQxIDEyLjU5IDE2IDExLjExIDE2IDkuNSAxNiA1LjkxIDEzLjA5IDMgOS41IDNTMyA1LjkxIDMgOS41IDUuOTEgMTYgOS41IDE2YzEuNjEgMCAzLjA5LS41OSA0LjIzLTEuNTdsLjI3LjI4di43OWw1IDQuOTlMMjAuNDkgMTlsLTQuOTktNXptLTYgMEM3LjAxIDE0IDUgMTEuOTkgNSA5LjVTNy4wMSA1IDkuNSA1IDE0IDcuMDEgMTQgOS41IDExLjk5IDE0IDkuNSAxNHonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJyAvPjwvc3ZnPg==) 12px 12px no-repeat;outline:0}.nav-trigger{display:none}.nav-trigger:checked+label{background-image:url(data:image/svg+xml;charset=UTF-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyNCcgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0Jz48cGF0aCBzdHlsZT0nZmlsbDojMjEyMTIxJyBkPSdNMTkgNi40MUwxNy41OSA1IDEyIDEwLjU5IDYuNDEgNSA1IDYuNDEgMTAuNTkgMTIgNSAxNy41OSA2LjQxIDE5IDEyIDEzLjQxIDE3LjU5IDE5IDE5IDE3LjU5IDEzLjQxIDEyeicvPjxwYXRoIGQ9J00wIDBoMjR2MjRIMHonIGZpbGw9J25vbmUnLz48L3N2Zz4=)}.nav-trigger:checked~#search{background:#fff;display:block;-webkit-transition:all 125ms ease;-moz-transition:all 125ms ease;-ms-transition:all 125ms ease;-o-transition:all 125ms ease;transition:all 125ms ease}.list{columns:3;column-gap:32px}.list li:before,.surah li:before{content:counter(step-counter);width:32px;font:700 12px/32px Helvetica,sans-serif;height:32px;background:#38393b;color:#fff;text-align:center;display:inline-block;position:absolute;margin-top:-1px}.list li,.surah li{counter-increment:step-counter}.list li,.surah li{border-top:1px solid #e6e7e7;display:block;width:100%}.surah li{padding-bottom:30px}.list a{padding-left:42px;display:inline-block;font-size:18px;line-height:48px;text-decoration:none;font-family:merriweather,georgia,serif;font-weight:400;width:88%}.list-title,.page-title{font-family:merriweather,georgia,serif;font-size:27px;font-weight:400;text-transform:capitalize}.page-title{text-align:center}.by{text-align:center;font-family:sans-serif;font-size:13px;padding-bottom:30px}.bismillah{border-top:1px solid #e6e7e7;text-align:center;line-height:120px;margin:0}.bismillah,.arabic{font-family:lPMQ;font-size:30px;direction:rtl;display:block}.arabic{line-height:72px;text-align:right;padding-left:32px;margin-bottom:0}.translate{font-family:merriweather,georgia,serif}.meaning,.tafsir-link,.entry{font-family:Roboto,Arial,Helvetica,sans-serif}.entry h2{font-size:18px}.footer{margin-top:30px;border-top:1px solid #e6e7e7;line-height:48px;font-size:.8em;font-family:Roboto,Arial,Helvetica,sans-serif}.copyright{float:left}.privacy{text-align:right;float:right}.pad{margin:30px 0}.banner-bottom{margin:60px 0}@media only screen and (max-width:800px){.list{columns:2;column-gap:32px}}@media only screen and (max-width:600px){.list{columns:1;column-gap:0}.bottom{display:block;position:fixed;bottom:0;width:100%;height:60px;background:red}}@media(prefers-color-scheme:dark){}
+</style>
+
+
+</head>
+<body>
+<article>
+<p class="bismillah">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
+<ol class="surah">
+<li>
+<p class="arabic" dir="rtl">اِذَا وَقَعَتِ الْوَاقِعَةُۙ</p>
+<p class="translate">Iżā waqa&lsquo;atil-wāqi&lsquo;ah(tu).</p>
+<p class="meaning">Apabila terjadi hari Kiamat (yang pasti terjadi),</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">لَيْسَ لِوَقْعَتِهَا كَاذِبَةٌ ۘ</p>
+<p class="translate">Laisa liwaq&lsquo;atihā kāżibah(tun).</p>
+<p class="meaning">tidak ada seorang pun yang (dapat) mendustakan terjadinya.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">خَافِضَةٌ رَّافِعَةٌ</p>
+<p class="translate">Khāfiḍatur rāfi&lsquo;ah(tun).</p>
+<p class="meaning">(Kejadian itu) merendahkan (satu golongan) dan meninggikan (golongan yang lain).</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اِذَا رُجَّتِ الْاَرْضُ رَجًّاۙ</p>
+<p class="translate">Iżā rujjatil-arḍu rajjā(n).</p>
+<p class="meaning">Apabila bumi diguncangkan sedahsyat-dahsyatnya</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّبُسَّتِ الْجِبَالُ بَسًّاۙ</p>
+<p class="translate">Wa bussatil-jibālu bassā(n).</p>
+<p class="meaning">dan gunung-gunung dihancurkan sehancur-hancurnya,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">فَكَانَتْ هَبَاۤءً مُّنْۢبَثًّاۙ</p>
+<p class="translate">Fa kānat habā'am mumbaṡṡā(n).</p>
+<p class="meaning">jadilah ia debu yang beterbangan.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّكُنْتُمْ اَزْوَاجًا ثَلٰثَةً ۗ</p>
+<p class="translate">Wa kuntum azwājan ṡalāṡah(tan).</p>
+<p class="meaning">Kamu menjadi tiga golongan,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">فَاَصْحٰبُ الْمَيْمَنَةِ ەۙ مَآ اَصْحٰبُ الْمَيْمَنَةِ ۗ</p>
+<p class="translate">Fa aṣḥābul-maimanah(ti), mā aṣḥābul-maimanah(ti).</p>
+<p class="meaning">yaitu golongan kanan, alangkah mulianya golongan kanan itu</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَاَصْحٰبُ الْمَشْـَٔمَةِ ەۙ مَآ اَصْحٰبُ الْمَشْـَٔمَةِ ۗ</p>
+<p class="translate">Wa aṣḥābul-masy'amah(ti), mā aṣḥābul-masy'amah(ti).</p>
+<p class="meaning">dan golongan kiri, alangkah sengsaranya golongan kiri itu.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَالسّٰبِقُوْنَ السّٰبِقُوْنَۙ</p>
+<p class="translate">Was-sābiqūnas-sābiqūn(a).</p>
+<p class="meaning">Selain itu, (golongan ketiga adalah) orang-orang yang paling dahulu (beriman). Merekalah yang paling dahulu (masuk surga).</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اُولٰۤىِٕكَ الْمُقَرَّبُوْنَۚ</p>
+<p class="translate">Ulā'ikal-muqarrabūn(a).</p>
+<p class="meaning">Mereka itulah orang-orang yang didekatkan (kepada Allah).</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">فِيْ جَنّٰتِ النَّعِيْمِ</p>
+<p class="translate">Fī jannātin-na&lsquo;īm(i).</p>
+<p class="meaning">(Mereka) berada dalam surga (yang penuh) kenikmatan.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">ثُلَّةٌ مِّنَ الْاَوَّلِيْنَۙ</p>
+<p class="translate">Ṡullatum minal-awwalīn(a).</p>
+<p class="meaning">(Mereka adalah) segolongan besar dari orang-orang yang terdahulu</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَقَلِيْلٌ مِّنَ الْاٰخِرِيْنَۗ</p>
+<p class="translate">Wa qalīlum minal-ākhirīn(a).</p>
+<p class="meaning">dan sedikit dari orang-orang yang (datang) kemudian.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">عَلٰى سُرُرٍ مَّوْضُوْنَةٍۙ</p>
+<p class="translate">&lsquo;Alā sururim mauḍūnah(tin).</p>
+<p class="meaning">(Mereka berada) di atas dipan-dipan yang bertatahkan emas dan permata</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">مُّتَّكِـِٕيْنَ عَلَيْهَا مُتَقٰبِلِيْنَ</p>
+<p class="translate">Muttaki'īna &lsquo;alaihā mutaqābilīn(a).</p>
+<p class="meaning">seraya bersandar di atasnya saling berhadapan.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">يَطُوْفُ عَلَيْهِمْ وِلْدَانٌ مُّخَلَّدُوْنَۙ</p>
+<p class="translate">Yaṭūfu &lsquo;alaihim wildānum mukhalladūn(a).</p>
+<p class="meaning">Mereka dikelilingi oleh anak-anak yang selalu muda</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">بِاَكْوَابٍ وَّاَبَارِيْقَۙ وَكَأْسٍ مِّنْ مَّعِيْنٍۙ</p>
+<p class="translate">Bi'akwābiw wa abārīq(a), wa ka'sim mim ma&lsquo;īn(in).</p>
+<p class="meaning">dengan (membawa) gelas, kendi, dan seloki (berisi minuman yang diambil) dari sumber yang mengalir.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">لَّا يُصَدَّعُوْنَ عَنْهَا وَلَا يُنْزِفُوْنَۙ</p>
+<p class="translate">Lā yuṣadda&lsquo;ūna &lsquo;anhā wa lā yunzifūn(a).</p>
+<p class="meaning">Mereka tidak pening karenanya dan tidak pula mabuk.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَفَاكِهَةٍ مِّمَّا يَتَخَيَّرُوْنَۙ</p>
+<p class="translate">Wa fākihatim mimmā yatakhayyarūn(a).</p>
+<p class="meaning">(Mereka menyuguhkan pula) buah-buahan yang mereka pilih</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَلَحْمِ طَيْرٍ مِّمَّا يَشْتَهُوْنَۗ</p>
+<p class="translate">Wa laḥmi ṭairim mimmā yasytahūn(a).</p>
+<p class="meaning">dan daging burung yang mereka sukai.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَحُوْرٌ عِيْنٌۙ</p>
+<p class="translate">Wa ḥūrun &lsquo;īn(un).</p>
+<p class="meaning">Ada bidadari yang bermata indah</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">كَاَمْثَالِ اللُّؤْلُؤِ الْمَكْنُوْنِۚ</p>
+<p class="translate">Ka'amṡālil-lu'lu'il-maknūn(i).</p>
+<p class="meaning">laksana mutiara yang tersimpan dengan baik</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">جَزَاۤءًۢ بِمَا كَانُوْا يَعْمَلُوْنَ</p>
+<p class="translate">Jazā'am bimā kānū ya&lsquo;malūn(a).</p>
+<p class="meaning">sebagai balasan atas apa yang selama ini mereka kerjakan.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">لَا يَسْمَعُوْنَ فِيْهَا لَغْوًا وَّلَا تَأْثِيْمًاۙ</p>
+<p class="translate">Lā yasma&lsquo;ūna fīhā lagwaw wa lā ta'ṡīmā(n).</p>
+<p class="meaning">Di sana mereka tidak mendengar percakapan yang sia-sia dan tidak (pula) percakapan yang menimbulkan dosa,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اِلَّا قِيْلًا سَلٰمًا سَلٰمًا</p>
+<p class="translate">Illā qīlan salāman salāmā(n).</p>
+<p class="meaning">kecuali (yang mereka dengar hanyalah) ucapan, &ldquo;Salam&hellip; salam.&rdquo;</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَاَصْحٰبُ الْيَمِيْنِ ەۙ مَآ اَصْحٰبُ الْيَمِيْنِۗ</p>
+<p class="translate">Wa aṣḥābul-yamīn(i), mā aṣḥābul-yamīn(i).</p>
+<p class="meaning">Golongan kanan, alangkah mulianya golongan kanan itu.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">فِيْ سِدْرٍ مَّخْضُوْدٍۙ</p>
+<p class="translate">Fī sidrim makhḍūd(in).</p>
+<p class="meaning">(Mereka) berada di antara pohon bidara yang tidak berduri,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّطَلْحٍ مَّنْضُوْدٍۙ</p>
+<p class="translate">Wa ṭalḥim manḍūd(in).</p>
+<p class="meaning">pohon pisang yang (buahnya) bersusun-susun,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّظِلٍّ مَّمْدُوْدٍۙ</p>
+<p class="translate">Wa ẓillim mamdūd(in).</p>
+<p class="meaning">naungan yang terbentang luas,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّمَاۤءٍ مَّسْكُوْبٍۙ</p>
+<p class="translate">Wa mā'im maskūb(in).</p>
+<p class="meaning">air yang tercurah,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّفَاكِهَةٍ كَثِيْرَةٍۙ</p>
+<p class="translate">Wa fākihatin kaṡīrah(tin).</p>
+<p class="meaning">buah-buahan yang banyak</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">لَّا مَقْطُوْعَةٍ وَّلَا مَمْنُوْعَةٍۙ</p>
+<p class="translate">Lā maqṭū&lsquo;atiw wa lā mamnū&lsquo;ah(tin).</p>
+<p class="meaning">yang tidak berhenti berbuah dan tidak terlarang memetiknya,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّفُرُشٍ مَّرْفُوْعَةٍۗ</p>
+<p class="translate">Wa furusyim marfū&lsquo;ah(tin).</p>
+<p class="meaning">dan kasur-kasur yang tebal lagi empuk.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اِنَّآ اَنْشَأْنٰهُنَّ اِنْشَاۤءًۙ</p>
+<p class="translate">Innā ansya'nāhunna insyā'ā(n).</p>
+<p class="meaning">Sesungguhnya Kami menciptakan mereka (bidadari itu) secara langsung,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">فَجَعَلْنٰهُنَّ اَبْكَارًاۙ</p>
+<p class="translate">Faja&lsquo;alnāhunna abkārā(n).</p>
+<p class="meaning">lalu Kami jadikan mereka perawan-perawan</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">عُرُبًا اَتْرَابًاۙ</p>
+<p class="translate">&lsquo;Uruban atrābā(n).</p>
+<p class="meaning">yang penuh cinta (lagi) sebaya umurnya,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">لِّاَصْحٰبِ الْيَمِيْنِۗ</p>
+<p class="translate">Li'aṣḥābil-yamīn(i).</p>
+<p class="meaning">(diperuntukkan) bagi golongan kanan,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">ثُلَّةٌ مِّنَ الْاَوَّلِيْنَۙ</p>
+<p class="translate">Ṡullatum minal-awwalīn(a).</p>
+<p class="meaning">(yaitu) segolongan besar dari orang-orang yang terdahulu</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَثُلَّةٌ مِّنَ الْاٰخِرِيْنَۗ ࣖ</p>
+<p class="translate">Wa ṡullatum minal-ākhirīn(a).</p>
+<p class="meaning">dan segolongan besar (pula) dari orang-orang yang kemudian.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَاَصْحٰبُ الشِّمَالِ ەۙ مَآ اَصْحٰبُ الشِّمَالِۗ</p>
+<p class="translate">Wa aṣḥābusy-syimāl(i), mā aṣḥābusy-syimāl(i).</p>
+<p class="meaning">Golongan kiri, alangkah sengsaranya golongan kiri itu.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">فِيْ سَمُوْمٍ وَّحَمِيْمٍۙ</p>
+<p class="translate">Fī samūmiw wa ḥamīm(in).</p>
+<p class="meaning">(Mereka berada) dalam siksaan angin yang sangat panas, air yang mendidih,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّظِلٍّ مِّنْ يَّحْمُوْمٍۙ</p>
+<p class="translate">Wa ẓillim miy yaḥmūm(in).</p>
+<p class="meaning">dan naungan asap hitam</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">لَّا بَارِدٍ وَّلَا كَرِيْمٍ</p>
+<p class="translate">Lā bāridiw wa lā karīm(in).</p>
+<p class="meaning">yang tidak sejuk dan tidak menyenangkan.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اِنَّهُمْ كَانُوْا قَبْلَ ذٰلِكَ مُتْرَفِيْنَۚ</p>
+<p class="translate">Innahum kānū qabla żālika mutrafīn(a).</p>
+<p class="meaning">Sesungguhnya mereka sebelum itu hidup bermewah-mewah.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَكَانُوْا يُصِرُّوْنَ عَلَى الْحِنْثِ الْعَظِيْمِۚ</p>
+<p class="translate">Wa kānū yuṣirrūna &lsquo;alal-ḥinṡil-&lsquo;aẓīm(i).</p>
+<p class="meaning">Mereka terus-menerus mengerjakan dosa yang besar.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَكَانُوْا يَقُوْلُوْنَ ەۙ اَىِٕذَا مِتْنَا وَكُنَّا تُرَابًا وَّعِظَامًا ءَاِنَّا لَمَبْعُوْثُوْنَۙ</p>
+<p class="translate">Wa kānū yaqūlūn(a), a'iżā mitnā wa kunnā turābaw wa &lsquo;iẓāman a'innā lamab&lsquo;ūṡūn(a).</p>
+<p class="meaning">Mereka berkata, &ldquo;Apabila kami telahmati menjadi tanah dan tulang-belulang, apakah kami benar-benar akan dibangkitkan (kembali)?</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اَوَاٰبَاۤؤُنَا الْاَوَّلُوْنَ</p>
+<p class="translate">Awa'ābā'unal-awwalūn(a).</p>
+<p class="meaning">Apakah nenek moyang kami yang terdahulu (akan dibangkitkan pula)?&rdquo;</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">قُلْ اِنَّ الْاَوَّلِيْنَ وَالْاٰخِرِيْنَۙ</p>
+<p class="translate">Qul innal-awwalīna wal-ākhirīn(a).</p>
+<p class="meaning">Katakanlah (Nabi Muhammad), &ldquo;Sesungguhnya orang-orang yang terdahulu dan yang kemudian</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">لَمَجْمُوْعُوْنَۙ اِلٰى مِيْقَاتِ يَوْمٍ مَّعْلُوْمٍ</p>
+<p class="translate">Lamajmū&lsquo;ūn(a), ilā mīqāti yaumim ma&lsquo;lūm(in).</p>
+<p class="meaning">benar-benar akan dikumpulkan pada waktu tertentu, yaitu hari yang sudah diketahui.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">ثُمَّ اِنَّكُمْ اَيُّهَا الضَّاۤ لُّوْنَ الْمُكَذِّبُوْنَۙ</p>
+<p class="translate">Ṡumma innakum ayyuhaḍ-ḍāllūnal-mukażżibūn(a).</p>
+<p class="meaning">Kemudian, sesungguhnya kamu, wahai orang-orang sesat lagi pendusta,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">لَاٰكِلُوْنَ مِنْ شَجَرٍ مِّنْ زَقُّوْمٍۙ</p>
+<p class="translate">La'ākilūna min syajarim min zaqqūm(in).</p>
+<p class="meaning">pasti akan memakan pohon zaqum.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">فَمَالِـُٔوْنَ مِنْهَا الْبُطُوْنَۚ</p>
+<p class="translate">Fa māli'ūna minhal-buṭūn(a).</p>
+<p class="meaning">Lalu, kamu akan memenuhi perut-perutmu dengannya.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">فَشٰرِبُوْنَ عَلَيْهِ مِنَ الْحَمِيْمِۚ</p>
+<p class="translate">Fasyāribūna &lsquo;alaihi minal-ḥamīm(i).</p>
+<p class="meaning">Setelah itu, untuk penawarnya (zaqum) kamu akan meminum air yang sangat panas.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">فَشٰرِبُوْنَ شُرْبَ الْهِيْمِۗ</p>
+<p class="translate">Fa syāribūna syurbal-hīm(i).</p>
+<p class="meaning">Maka, kamu minum bagaikan unta yang sangat haus.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">هٰذَا نُزُلُهُمْ يَوْمَ الدِّيْنِۗ</p>
+<p class="translate">Hāżā nuzuluhum yaumad-dīn(i).</p>
+<p class="meaning">Inilah hidangan (untuk) mereka pada hari Pembalasan.&rdquo;</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">نَحْنُ خَلَقْنٰكُمْ فَلَوْلَا تُصَدِّقُوْنَ</p>
+<p class="translate">Naḥnu khalaqnākum falau lā tuṣaddiqūn(a).</p>
+<p class="meaning">Kami telah menciptakanmu. Mengapa kamu tidak membenarkan (hari Kebangkitan)?</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اَفَرَءَيْتُمْ مَّا تُمْنُوْنَۗ</p>
+<p class="translate">Afa ra'aitum mā tumnūn(a).</p>
+<p class="meaning">Apakah kamu memperhatikan apa yang kamu pancarkan (sperma)?</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">ءَاَنْتُمْ تَخْلُقُوْنَهٗٓ اَمْ نَحْنُ الْخٰلِقُوْنَ</p>
+<p class="translate">A'antum takhluqūnahū am naḥnul-khāliqūn(a).</p>
+<p class="meaning">Apakah kamu yang menciptakannya atau Kami Penciptanya?</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">نَحْنُ قَدَّرْنَا بَيْنَكُمُ الْمَوْتَ وَمَا نَحْنُ بِمَسْبُوْقِيْنَۙ</p>
+<p class="translate">Naḥnu qaddarnā bainakumul-mauta wa mā naḥnu bimasbūqīn(a).</p>
+<p class="meaning">Kami telah menentukan kematian di antara kamu dan Kami tidak lemah</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">عَلٰٓى اَنْ نُّبَدِّلَ اَمْثَالَكُمْ وَنُنْشِئَكُمْ فِيْ مَا لَا تَعْلَمُوْنَ</p>
+<p class="translate">&lsquo;Alā an nubaddila amṡālakum wa nunsyi'akum fī mā lā ta&lsquo;lamūn(a).</p>
+<p class="meaning">untuk mengubah bentukmu (di hari Kiamat) dan menciptakanmu kelak dalam keadaan yang tidak kamu ketahui.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَلَقَدْ عَلِمْتُمُ النَّشْاَةَ الْاُوْلٰى فَلَوْلَا تَذَكَّرُوْنَ</p>
+<p class="translate">Wa laqad &lsquo;alimtumun-nasy'atal-ūlā falau lā tażakkarūn(a).</p>
+<p class="meaning">Sungguh, kamu benar-benar telah mengetahui penciptaan yang pertama. Mengapa kamu tidak mengambil pelajaran?</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اَفَرَءَيْتُمْ مَّا تَحْرُثُوْنَۗ</p>
+<p class="translate">Afara'aitum mā taḥruṡūn(a).</p>
+<p class="meaning">Apakah kamu memperhatikan benih yang kamu tanam?</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">ءَاَنْتُمْ تَزْرَعُوْنَهٗٓ اَمْ نَحْنُ الزّٰرِعُوْنَ</p>
+<p class="translate">A'antum tazra&lsquo;ūnahū am naḥnuz-zāri&lsquo;ūn(a).</p>
+<p class="meaning">Apakah kamu yang menumbuhkannya atau Kami yang menumbuhkan?</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">لَوْ نَشَاۤءُ لَجَعَلْنٰهُ حُطَامًا فَظَلْتُمْ تَفَكَّهُوْنَۙ</p>
+<p class="translate">Lau nasyā'u laja&lsquo;alnāhu ḥuṭāman fa ẓaltum tafakkahūn(a).</p>
+<p class="meaning">Seandainya Kami berkehendak, Kami benar-benar menjadikannya hancur sehingga kamu menjadi heran tercengang,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اِنَّا لَمُغْرَمُوْنَۙ</p>
+<p class="translate">Innā lamugramūn(a).</p>
+<p class="meaning">(sambil berkata,) &ldquo;Sesungguhnya kami benar-benar menderita kerugian.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">بَلْ نَحْنُ مَحْرُوْمُوْنَ</p>
+<p class="translate">Bal naḥnu maḥrūmūn(a).</p>
+<p class="meaning">Bahkan, kami tidak mendapat hasil apa pun.&rdquo;</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اَفَرَءَيْتُمُ الْمَاۤءَ الَّذِيْ تَشْرَبُوْنَۗ</p>
+<p class="translate">Afa ra'aitumul-mā'al-lażī tasyrabūn(a).</p>
+<p class="meaning">Apakah kamu memperhatikan air yang kamu minum?</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">ءَاَنْتُمْ اَنْزَلْتُمُوْهُ مِنَ الْمُزْنِ اَمْ نَحْنُ الْمُنْزِلُوْنَ</p>
+<p class="translate">A'antum anzaltumūhu minal-muzni am naḥnul-munzilūn(a).</p>
+<p class="meaning">Apakah kamu yang menurunkannya dari awan atau Kami yang menurunkan?</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">لَوْ نَشَاۤءُ جَعَلْنٰهُ اُجَاجًا فَلَوْلَا تَشْكُرُوْنَ</p>
+<p class="translate">Lau nasyā'u ja&lsquo;alnāhu ujājan falau lā tasykurūn(a).</p>
+<p class="meaning">Seandainya Kami berkehendak, Kami menjadikannya asin. Mengapa kamu tidak bersyukur?</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اَفَرَءَيْتُمُ النَّارَ الَّتِيْ تُوْرُوْنَۗ</p>
+<p class="translate">Afa ra'aitumun-nāral-latī tūrūn(a).</p>
+<p class="meaning">Apakah kamu memperhatikan api yang kamu nyalakan?</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">ءَاَنْتُمْ اَنْشَأْتُمْ شَجَرَتَهَآ اَمْ نَحْنُ الْمُنْشِـُٔوْنَ</p>
+<p class="translate">A'antum ansya'tum syajaratahā am naḥnul-munsyi'ūn(a).</p>
+<p class="meaning">Apakah kamu yang menumbuhkan kayunya atau Kami yang menumbuhkan?</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">نَحْنُ جَعَلْنٰهَا تَذْكِرَةً وَّمَتَاعًا لِّلْمُقْوِيْنَۚ</p>
+<p class="translate">Naḥnu ja&lsquo;alnāhā tażkirataw wa matā&lsquo;al lil-muqwīn(a).</p>
+<p class="meaning">Kami menjadikannya (api itu) sebagai peringatan dan manfaat bagi para musafir.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">فَسَبِّحْ بِاسْمِ رَبِّكَ الْعَظِيْمِ ࣖ</p>
+<p class="translate">Fa sabbiḥ bismi rabbikal-&lsquo;aẓīm(i).</p>
+<p class="meaning">Maka, bertasbihlah dengan (menyebut) nama Tuhanmu Yang Mahaagung.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">۞ فَلَآ اُقْسِمُ بِمَوٰقِعِ النُّجُوْمِ</p>
+<p class="translate">Falā uqsimu bimawāqi&lsquo;in-nujūm(i).</p>
+<p class="meaning">Aku bersumpah demi tempat beredarnya bintang-bintang.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَاِنَّهٗ لَقَسَمٌ لَّوْ تَعْلَمُوْنَ عَظِيْمٌۙ</p>
+<p class="translate">Wa innahū laqasamul lau ta&lsquo;lamūna &lsquo;aẓīm(un).</p>
+<p class="meaning">Sesungguhnya itu benar-benar sumpah yang sangat besar seandainya kamu mengetahui.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اِنَّهٗ لَقُرْاٰنٌ كَرِيْمٌۙ</p>
+<p class="translate">Innahū laqur'ānun karīm(un).</p>
+<p class="meaning">Sesungguhnya ia benar-benar Al-Qur&rsquo;an yang sangat mulia,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">فِيْ كِتٰبٍ مَّكْنُوْنٍۙ</p>
+<p class="translate">Fī kitābim maknūn(in).</p>
+<p class="meaning">dalam Kitab yang terpelihara.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">لَّا يَمَسُّهٗٓ اِلَّا الْمُطَهَّرُوْنَۗ</p>
+<p class="translate">Lā yamassuhū illal-muṭahharūn(a).</p>
+<p class="meaning">Tidak ada yang menyentuhnya, kecuali para hamba (Allah) yang disucikan.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">تَنْزِيْلٌ مِّنْ رَّبِّ الْعٰلَمِيْنَ</p>
+<p class="translate">Tanzīlum mir rabbil-&lsquo;ālamīn(a).</p>
+<p class="meaning">(Al-Qur&rsquo;an) diturunkan dari Tuhan seluruh alam.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اَفَبِهٰذَا الْحَدِيْثِ اَنْتُمْ مُّدْهِنُوْنَۙ</p>
+<p class="translate">Afa biḥāżal-ḥadīṡi antum mudhinūn(a).</p>
+<p class="meaning">Apakah kamu menganggap remeh berita ini (Al-Qur&rsquo;an)</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَتَجْعَلُوْنَ رِزْقَكُمْ اَنَّكُمْ تُكَذِّبُوْنَ</p>
+<p class="translate">Wa taj&lsquo;alūna rizqakum annakum tukażżibūn(a).</p>
+<p class="meaning">dan kamu menjadikan rezeki yang kamu terima (dari Allah) justru untuk mendustakan (Al-Qur&rsquo;an)?</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">فَلَوْلَآ اِذَا بَلَغَتِ الْحُلْقُوْمَۙ</p>
+<p class="translate">Falau lā iżā balagatil-ḥulqūm(a).</p>
+<p class="meaning">Kalau begitu, mengapa (kamu) tidak (menahan nyawa) ketika telah sampai di kerongkongan,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَاَنْتُمْ حِيْنَىِٕذٍ تَنْظُرُوْنَۙ</p>
+<p class="translate">Wa antum ḥīna'iżin tanẓurūn(a).</p>
+<p class="meaning">padahal kamu ketika itu melihat (orang yang sedang sekarat)?</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَنَحْنُ اَقْرَبُ اِلَيْهِ مِنْكُمْ وَلٰكِنْ لَّا تُبْصِرُوْنَ</p>
+<p class="translate">Wa naḥnu aqrabu ilaihi minkum wa lākil lā tubṣirūn(a).</p>
+<p class="meaning">Kami lebih dekat kepadanya (orang yang sedang sekarat) daripada kamu, tetapi kamu tidak melihat.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">فَلَوْلَآ اِنْ كُنْتُمْ غَيْرَ مَدِيْنِيْنَۙ</p>
+<p class="translate">Falau lā in kuntum gaira madīnīn(a).</p>
+<p class="meaning">Maka, mengapa jika kamu tidak diberi balasan,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">تَرْجِعُوْنَهَآ اِنْ كُنْتُمْ صٰدِقِيْنَ</p>
+<p class="translate">Tarji&lsquo;ūnahā in kuntum ṣādiqīn(a).</p>
+<p class="meaning">kamu tidak mengembalikannya (nyawa itu) jika kamu orang-orang yang benar?</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">فَاَمَّآ اِنْ كَانَ مِنَ الْمُقَرَّبِيْنَۙ</p>
+<p class="translate">Fa ammā in kāna minal-muqarrabīn(a).</p>
+<p class="meaning">Jika dia (orang yang mati) itu termasuk yang didekatkan (kepada Allah),</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">فَرَوْحٌ وَّرَيْحَانٌ ەۙ وَّجَنَّتُ نَعِيْمٍ</p>
+<p class="translate">Fa rauḥuw wa raiḥān(un), wa jannatu na&lsquo;īm(in).</p>
+<p class="meaning">dia memperoleh ketenteraman, rezeki, dan surga (yang penuh) kenikmatan.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَاَمَّآ اِنْ كَانَ مِنْ اَصْحٰبِ الْيَمِيْنِۙ</p>
+<p class="translate">Wa ammā in kāna min aṣḥābil-yamīn(i).</p>
+<p class="meaning">Jika dia (termasuk) golongan kanan,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">فَسَلٰمٌ لَّكَ مِنْ اَصْحٰبِ الْيَمِيْنِۗ</p>
+<p class="translate">Fa salāmul laka min aṣḥābil-yamīn(i).</p>
+<p class="meaning">&ldquo;Salam bagimu&rdquo; dari (sahabatmu,) golongan kanan.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَاَمَّآ اِنْ كَانَ مِنَ الْمُكَذِّبِيْنَ الضَّاۤلِّيْنَۙ</p>
+<p class="translate">Wa ammā in kāna minal-mukażżibīnaḍ-ḍāllīn(a).</p>
+<p class="meaning">Jika dia termasuk golongan para pendusta lagi sesat,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">فَنُزُلٌ مِّنْ حَمِيْمٍۙ</p>
+<p class="translate">Fa nuzulum min ḥamīm(in).</p>
+<p class="meaning">jamuannya berupa air mendidih</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّتَصْلِيَةُ جَحِيْمٍ</p>
+<p class="translate">Wa taṣliyatu jaḥīm(in).</p>
+<p class="meaning">dan dibakar oleh (neraka) Jahim.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اِنَّ هٰذَا لَهُوَ حَقُّ الْيَقِيْنِۚ</p>
+<p class="translate">Inna hāżā lahuwal-ḥaqqul-yaqīn(i).</p>
+<p class="meaning">Sesungguhnya ini benar-benar merupakan hakulyakin.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">فَسَبِّحْ بِاسْمِ رَبِّكَ الْعَظِيْمِ ࣖ</p>
+<p class="translate">Fa sabbiḥ bismi rabbikal-&lsquo;aẓīm(i).</p>
+<p class="meaning">Maka, bertasbihlah dengan (menyebut) nama Tuhanmu Yang Mahaagung.</p>
+</li>
+</ol>
+</article>
+</body>
+</html>
