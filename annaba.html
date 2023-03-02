@@ -1,0 +1,224 @@
+ 
+    <style>
+      @font-face{font-family:lpmq;src:local('LPMQ'),url(fonts/LPMQ.woff2) format('woff2'),url(fonts/LPMQ.woff) format('woff'),url(fonts/LPMQ.ttf) format('truetype'),url(fonts/LPMQ.eot) format('embedded-opentype');font-weight:400;font-style:normal;font-display:swap}/*!normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css*/html{line-height:1.15;-webkit-text-size-adjust:100%}
+	  body{margin:0;padding:5%;}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}.cf:after,.full:after,.row:after,.ui-helper-clearfix:after,.wrap:after{clear:both}html{background:#fff;scroll-behavior:smooth}body{font-size:16px;font-weight:400;line-height:1.5;color:#212121}ol,ul{margin:0;padding:0}a{color:#212121;text-decoration:none;-webkit-transition:all .1s 0s ease-in;-moz-transition:all .1s 0s ease-in;-o-transition:all .1s 0s ease-in;transition:all .1s 0s ease-in}a:hover{color:#af862f;-webkit-transition:all .05s 0s ease-out;-moz-transition:all .05s 0s ease-out;-o-transition:all .05s 0s ease-out;transition:all .05s 0s ease-out}.main{margin-top:96px}.wrap{max-width:1000px;width:90%;margin-left:auto;margin-right:auto}.rel{position:relative}.header-nav{width:100%;max-width:1024px;margin:0 auto;border-top:6px solid #000a12;background:#f5f5f5;top:0;position:fixed;height:48px;left:0;right:0;z-index:2}.logo{margin:0}.logo a{font:700 12px/48px sans-serif;float:left;padding:0 12px;text-decoration:none}#search{display:none;border:none;margin:0;padding:0;width:100%;top:0;right:0;text-indent:12px;font:400 14px/24px Arial,sans-serif;padding:12px 0}#search-box{box-sizing:border-box;position:absolute;top:6px;right:0;width:100%;display:block;border:none;outline:none;z-index:100;line-height:24px;padding:6px 12px 11px;border-bottom:1px solid #e6e7e7}#search:focus{outline:0;color:#eaeaea}label[for=nav-trigger]{position:absolute;top:0;right:0;z-index:120;width:48px;height:48px;cursor:pointer;background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyNCcgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0Jz48cGF0aCBzdHlsZT0nZmlsbDojMjEyMTIxJyBkPSdNMTUuNSAxNGgtLjc5bC0uMjgtLjI3QzE1LjQxIDEyLjU5IDE2IDExLjExIDE2IDkuNSAxNiA1LjkxIDEzLjA5IDMgOS41IDNTMyA1LjkxIDMgOS41IDUuOTEgMTYgOS41IDE2YzEuNjEgMCAzLjA5LS41OSA0LjIzLTEuNTdsLjI3LjI4di43OWw1IDQuOTlMMjAuNDkgMTlsLTQuOTktNXptLTYgMEM3LjAxIDE0IDUgMTEuOTkgNSA5LjVTNy4wMSA1IDkuNSA1IDE0IDcuMDEgMTQgOS41IDExLjk5IDE0IDkuNSAxNHonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJyAvPjwvc3ZnPg==) 12px 12px no-repeat;outline:0}.nav-trigger{display:none}.nav-trigger:checked+label{background-image:url(data:image/svg+xml;charset=UTF-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyNCcgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0Jz48cGF0aCBzdHlsZT0nZmlsbDojMjEyMTIxJyBkPSdNMTkgNi40MUwxNy41OSA1IDEyIDEwLjU5IDYuNDEgNSA1IDYuNDEgMTAuNTkgMTIgNSAxNy41OSA2LjQxIDE5IDEyIDEzLjQxIDE3LjU5IDE5IDE5IDE3LjU5IDEzLjQxIDEyeicvPjxwYXRoIGQ9J00wIDBoMjR2MjRIMHonIGZpbGw9J25vbmUnLz48L3N2Zz4=)}.nav-trigger:checked~#search{background:#fff;display:block;-webkit-transition:all 125ms ease;-moz-transition:all 125ms ease;-ms-transition:all 125ms ease;-o-transition:all 125ms ease;transition:all 125ms ease}.list{columns:3;column-gap:32px}.list li:before,.surah li:before{content:counter(step-counter);width:32px;font:700 12px/32px Helvetica,sans-serif;height:32px;background:#38393b;color:#fff;text-align:center;display:inline-block;position:absolute;margin-top:-1px}.list li,.surah li{counter-increment:step-counter}.list li,.surah li{border-top:1px solid #e6e7e7;display:block;width:100%}.surah li{padding-bottom:30px}.list a{padding-left:42px;display:inline-block;font-size:18px;line-height:48px;text-decoration:none;font-family:merriweather,georgia,serif;font-weight:400;width:88%}.list-title,.page-title{font-family:merriweather,georgia,serif;font-size:27px;font-weight:400;text-transform:capitalize}.page-title{text-align:center}.by{text-align:center;font-family:sans-serif;font-size:13px;padding-bottom:30px}.bismillah{border-top:1px solid #e6e7e7;text-align:center;line-height:120px;margin:0}.bismillah,.arabic{font-family:lPMQ;font-size:30px;direction:rtl;display:block}.arabic{line-height:72px;text-align:right;padding-left:32px;margin-bottom:0}.translate{font-family:merriweather,georgia,serif}.meaning,.tafsir-link,.entry{font-family:Roboto,Arial,Helvetica,sans-serif}.entry h2{font-size:18px}.footer{margin-top:30px;border-top:1px solid #e6e7e7;line-height:48px;font-size:.8em;font-family:Roboto,Arial,Helvetica,sans-serif}.copyright{float:left}.privacy{text-align:right;float:right}.pad{margin:30px 0}.banner-bottom{margin:60px 0}@media only screen and (max-width:800px){.list{columns:2;column-gap:32px}}@media only screen and (max-width:600px){.list{columns:1;column-gap:0}.bottom{display:block;position:fixed;bottom:0;width:100%;height:60px;background:red}}@media(prefers-color-scheme:dark){}
+
+
+
+
+   </style>
+</head>
+<body>
+
+
+<audio controls style="width: 100%;">
+    <source src="" type="audio/mpeg">
+    Browser Anda tidak support Tag Audio
+</audio>
+ <article>
+<h1 class="page-title">Surat An Naba'</h1>
+<p class="bismillah">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
+<ol class="surah">
+<li>
+<p class="arabic" dir="rtl">عَمَّ يَتَسَاۤءَلُوْنَۚ</p>
+<p class="translate">‘Amma yatasā'alūn(a).</p>
+<p class="meaning">Tentang apakah mereka saling bertanya?</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">عَنِ النَّبَاِ الْعَظِيْمِۙ</p>
+<p class="translate">‘Anin naba'il-‘aẓīm(i).</p>
+<p class="meaning">Tentang berita yang besar (hari Kebangkitan)</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">الَّذِيْ هُمْ فِيْهِ مُخْتَلِفُوْنَۗ</p>
+<p class="translate">Allażī hum fīhi mukhtalifūn(a).</p>
+<p class="meaning">yang dalam hal itu mereka berselisih.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">كَلَّا سَيَعْلَمُوْنَۙ</p>
+<p class="translate">Kallā saya‘lamūn(a).</p>
+<p class="meaning">Sekali-kali tidak! Kelak mereka akan mengetahui.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">ثُمَّ كَلَّا سَيَعْلَمُوْنَ</p>
+<p class="translate">Ṡumma kallā saya‘lamūn(a).</p>
+<p class="meaning">Sekali lagi, tidak! Kelak mereka akan mengetahui.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اَلَمْ نَجْعَلِ الْاَرْضَ مِهٰدًاۙ</p>
+<p class="translate">Alam naj‘alil-arḍa mihādā(n).</p>
+<p class="meaning">Bukankah Kami telah menjadikan bumi sebagai hamparan</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّالْجِبَالَ اَوْتَادًاۖ</p>
+<p class="translate">Wal-jibāla autādā(n).</p>
+<p class="meaning">dan gunung-gunung sebagai pasak?</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّخَلَقْنٰكُمْ اَزْوَاجًاۙ</p>
+<p class="translate">Wa khalaqnākum azwājā(n).</p>
+<p class="meaning">Kami menciptakan kamu berpasang-pasangan.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّجَعَلْنَا نَوْمَكُمْ سُبَاتًاۙ</p>
+<p class="translate">Wa ja‘alnā naumakum subātā(n).</p>
+<p class="meaning">Kami menjadikan tidurmu untuk beristirahat.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّجَعَلْنَا الَّيْلَ لِبَاسًاۙ</p>
+<p class="translate">Wa ja‘alnal-laila libāsā(n).</p>
+<p class="meaning">Kami menjadikan malam sebagai pakaian.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّجَعَلْنَا النَّهَارَ مَعَاشًاۚ</p>
+<p class="translate">Wa ja‘alnan-nahāra ma‘āsyā(n).</p>
+<p class="meaning">Kami menjadikan siang untuk mencari penghidupan.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَبَنَيْنَا فَوْقَكُمْ سَبْعًا شِدَادًاۙ</p>
+<p class="translate">Wa banainā fauqakum sab‘an syidādā(n).</p>
+<p class="meaning">Kami membangun tujuh (langit) yang kukuh di atasmu.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّجَعَلْنَا سِرَاجًا وَّهَّاجًاۖ</p>
+<p class="translate">Wa ja‘alnā sirājaw wahhājā(n).</p>
+<p class="meaning">Kami menjadikan pelita yang terang-benderang (matahari).</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّاَنْزَلْنَا مِنَ الْمُعْصِرٰتِ مَاۤءً ثَجَّاجًاۙ</p>
+<p class="translate">Wa anzalnā minal-mu‘ṣirāti mā'an ṡajjājā(n).</p>
+<p class="meaning">Kami menurunkan dari awan air hujan yang tercurah dengan deras</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">لِّنُخْرِجَ بِهٖ حَبًّا وَّنَبَاتًاۙ</p>
+<p class="translate">Linukhrija bihī ḥabbaw wa nabātā(n).</p>
+<p class="meaning">agar Kami menumbuhkan dengannya biji-bijian, tanam-tanaman,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّجَنّٰتٍ اَلْفَافًاۗ</p>
+<p class="translate">Wa jannātin alfāfā(n).</p>
+<p class="meaning">dan kebun-kebun yang rindang.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اِنَّ يَوْمَ الْفَصْلِ كَانَ مِيْقَاتًاۙ</p>
+<p class="translate">Inna yaumal-faṣli kāna mīqātā(n).</p>
+<p class="meaning">Sesungguhnya hari Keputusan itu adalah waktu yang telah ditetapkan,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">يَّوْمَ يُنْفَخُ فِى الصُّوْرِ فَتَأْتُوْنَ اَفْوَاجًاۙ</p>
+<p class="translate">Yauma yunfakhu fiṣ-ṣūri fa ta'tūna afwājā(n).</p>
+<p class="meaning">(yaitu) hari (ketika) sangkakala ditiup, lalu kamu datang berbondong-bondong.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّفُتِحَتِ السَّمَاۤءُ فَكَانَتْ اَبْوَابًاۙ</p>
+<p class="translate">Wa futiḥatis-samā'u fa kānat abwābā(n).</p>
+<p class="meaning">Langit pun dibuka. Maka, terdapatlah beberapa pintu.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّسُيِّرَتِ الْجِبَالُ فَكَانَتْ سَرَابًاۗ</p>
+<p class="translate">Wa suyyiratil-jibālu fa kānat sarābā(n).</p>
+ <p class="meaning">Gunung-gunung pun dijalankan. Maka, ia menjadi (seperti) fatamorgana.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اِنَّ جَهَنَّمَ كَانَتْ مِرْصَادًاۙ</p>
+<p class="translate">Inna jahannama kānat mirṣādā(n).</p>
+<p class="meaning">Sesungguhnya (neraka) Jahanam itu (merupakan) tempat mengintai (bagi penjaga neraka)</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">لِّلطّٰغِيْنَ مَاٰبًاۙ</p>
+<p class="translate">Liṭ-ṭāgīna ma'ābā(n).</p>
+<p class="meaning">(dan) menjadi tempat kembali bagi orang-orang yang melampaui batas.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">لّٰبِثِيْنَ فِيْهَآ اَحْقَابًاۚ</p>
+<p class="translate">Lābiṡīna fīhā aḥqābā(n).</p>
+<p class="meaning">Mereka tinggal di sana dalam masa yang lama.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">لَا يَذُوْقُوْنَ فِيْهَا بَرْدًا وَّلَا شَرَابًاۙ</p>
+<p class="translate">Lā yażūqūna fīhā bardaw wa lā syarābā(n).</p>
+<p class="meaning">Mereka tidak merasakan kesejukan di dalamnya dan tidak (pula mendapat) minuman,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اِلَّا حَمِيْمًا وَّغَسَّاقًاۙ</p>
+<p class="translate">Illā ḥamīmaw wa gassāqā(n).</p>
+<p class="meaning">selain air yang mendidih dan nanah,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">جَزَاۤءً وِّفَاقًاۗ</p>
+<p class="translate">Jazā'aw wifāqā(n).</p>
+<p class="meaning">sebagai pembalasan yang setimpal.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اِنَّهُمْ كَانُوْا لَا يَرْجُوْنَ حِسَابًاۙ</p>
+<p class="translate">Innahum kānū lā yarjūna ḥisābā(n).</p>
+<p class="meaning">Sesungguhnya mereka tidak pernah mengharapkan perhitungan.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّكَذَّبُوْا بِاٰيٰتِنَا كِذَّابًاۗ</p>
+<p class="translate">Wa każżabū bi'āyātinā kiżżābā(n).</p>
+<p class="meaning">Mereka benar-benar mendustakan ayat-ayat Kami.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَكُلَّ شَيْءٍ اَحْصَيْنٰهُ كِتٰبًاۙ</p>
+<p class="translate">Wa kulla syai'in aḥṣaināhu kitābā(n).</p>
+<p class="meaning">Segala sesuatu telah Kami catat dalam kitab (catatan amal manusia).</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">فَذُوْقُوْا فَلَنْ نَّزِيْدَكُمْ اِلَّا عَذَابًا ࣖ</p>
+<p class="translate">Fa żūqū falan nazīdakum illā ‘ażābā(n)</p>
+<p class="meaning">Oleh karena itu, rasakanlah! Tidak akan Kami tambahkan kepadamu, kecuali azab.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اِنَّ لِلْمُتَّقِيْنَ مَفَازًاۙ</p>
+<p class="translate">Inna lil-muttaqīna mafāzā(n).</p>
+<p class="meaning">Sesungguhnya bagi orang-orang yang bertakwa (ada) kemenangan (surga),</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">حَدَاۤىِٕقَ وَاَعْنَابًاۙ</p>
+<p class="translate">Ḥadā'iqa wa a‘nābā(n).</p>
+<p class="meaning">(yaitu) kebun-kebun, buah anggur,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّكَوَاعِبَ اَتْرَابًاۙ</p>
+<p class="translate">Wa kawā‘iba atrābā(n).</p>
+<p class="meaning">gadis-gadis molek yang sebaya,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">وَّكَأْسًا دِهَاقًاۗ</p>
+<p class="translate">Wa ka'san dihāqā(n).</p>
+<p class="meaning">dan gelas-gelas yang penuh (berisi minuman).</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">لَا يَسْمَعُوْنَ فِيْهَا لَغْوًا وَّلَا كِذّٰبًا</p>
+<p class="translate">Lā yasma‘ūna fīhā lagwaw wa lā kiżżābā(n).</p>
+<p class="meaning">Di sana mereka tidak mendengar percakapan yang sia-sia dan tidak pula (perkataan) dusta.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">جَزَاۤءً مِّنْ رَّبِّكَ عَطَاۤءً حِسَابًاۙ</p>
+<p class="translate">Jazā'am mir rabbika ‘aṭā'an ḥisābā(n).</p>
+<p class="meaning">(Hal itu) sebagai balasan (dan) pemberian yang banyak dari Tuhanmu,</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">رَّبِّ السَّمٰوٰتِ وَالْاَرْضِ وَمَا بَيْنَهُمَا الرَّحْمٰنِ لَا يَمْلِكُوْنَ مِنْهُ خِطَابًاۚ</p>
+<p class="translate">Rabbis-samāwāti wal-arḍi wa mā bainahumar-raḥmāni lā yamlikūna minhu khiṭābā(n).</p>
+<p class="meaning">(yaitu) Tuhan (pemelihara) langit, bumi, dan apa yang ada di antara keduanya, Yang Maha Pengasih. Mereka tidak memiliki (hak) berbicara dengan-Nya.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">يَوْمَ يَقُوْمُ الرُّوْحُ وَالْمَلٰۤىِٕكَةُ صَفًّاۙ لَّا يَتَكَلَّمُوْنَ اِلَّا مَنْ اَذِنَ لَهُ الرَّحْمٰنُ وَقَالَ صَوَابًا</p>
+<p class="translate">Yauma yaqūmur-rūḥu wal-malā'ikatu ṣaffā(n), lā yatakallamūna illā man ażina lahur-raḥmānu wa qāla ṣawābā(n).</p>
+<p class="meaning">Pada hari ketika Rūḥ dan malaikat berdiri bersaf-saf. Mereka tidak berbicara, kecuali yang diizinkan oleh Tuhan Yang Maha Pengasih dan dia mengatakan yang benar.</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">ذٰلِكَ الْيَوْمُ الْحَقُّۚ فَمَنْ شَاۤءَ اتَّخَذَ اِلٰى رَبِّهٖ مَاٰبًا</p>
+<p class="translate">Żālikal-yaumul-ḥaqq(u), faman syā'attakhaża ilā rabbihī ma'ābā(n).</p>
+<p class="meaning">Itulah hari yang hak (pasti terjadi). Siapa yang menghendaki (keselamatan) niscaya menempuh jalan kembali kepada Tuhannya (dengan beramal saleh).</p>
+</li>
+<li>
+<p class="arabic" dir="rtl">اِنَّآ اَنْذَرْنٰكُمْ عَذَابًا قَرِيْبًا ەۙ يَّوْمَ يَنْظُرُ الْمَرْءُ مَا قَدَّمَتْ يَدَاهُ وَيَقُوْلُ الْكٰفِرُ يٰلَيْتَنِيْ كُنْتُ تُرٰبًا ࣖ</p>
+<p class="translate">Innā anżarnākum ‘ażāban qarībā(n), yauma yanẓurul-mar'u mā qaddamat yadāhu wa yaqūlul-kāfiru yā laitanī kuntu turābā(n).</p>
+<p class="meaning">Sesungguhnya Kami telah memperingatkan kamu akan azab yang dekat pada hari (ketika) manusia melihat apa yang telah diperbuat oleh kedua tangannya dan orang kafir berkata, “Oh, seandainya saja aku menjadi tanah.”</p>
+</li>
+</ol>
+</article>
+</body> 
